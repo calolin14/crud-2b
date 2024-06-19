@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#D6D6D6"
+    tools:context=".PantallaCrud">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="137dp"
+        android:layout_marginTop="22dp"
+        android:layout_marginEnd="134dp"
+        android:layout_marginBottom="55dp"
+        android:text="CRUD"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/txtTitulo"
+        app:layout_constraintEnd_toEndOf="@+id/txtDescripciónTicket"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtTitulo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtDescripciónTicket"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginEnd="61dp"
+        android:ems="10"
+        android:hint="Descripción"
+        android:inputType="text"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/txtAutor"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="37dp"
+        android:layout_marginBottom="36dp"
+        android:ems="10"
+        android:hint="Autor"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechacreacion"
+        app:layout_constraintEnd_toStartOf="@+id/txtEmailautor"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/txtEmailautor"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="41dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="45dp"
+        android:ems="10"
+        android:hint="Email Autor"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtestadoTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtAutor"
+        app:layout_constraintTop_toBottomOf="@+id/txtTitulo" />
+
+    <EditText
+        android:id="@+id/txtFechacreacion"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="35dp"
+        android:ems="10"
+        android:hint="Fecha de creación"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechafinalticket"
+        app:layout_constraintEnd_toStartOf="@+id/txtestadoTicket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAutor" />
+
+    <EditText
+        android:id="@+id/txtestadoTicket"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginTop="270dp"
+        android:layout_marginEnd="61dp"
+        android:layout_marginBottom="270dp"
+        android:ems="10"
+        android:hint="Estado del ticket"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/rcvTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtFechacreacion"
+        app:layout_constraintTop_toTopOf="@+id/textView4"
+        app:layout_constraintVertical_bias="0.359" />
+
+    <EditText
+        android:id="@+id/txtFechafinalticket"
+        android:layout_width="151dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="47dp"
+        android:ems="10"
+        android:hint="Fecha final del ticket"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechacreacion" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcvTicket"
+        android:layout_width="422dp"
+        android:layout_height="334dp"
+        android:layout_marginBottom="3dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnGuardar" />
+
+    <Button
+        android:id="@+id/btnGuardar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="73dp"
+        android:backgroundTint="#000000"
+        android:text="Agregar ✔️"
+        app:layout_constraintBottom_toTopOf="@+id/rcvTicket"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechafinalticket" />
+
+    <EditText
+        android:id="@+id/txtTitulo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="41dp"
+        android:layout_marginBottom="28dp"
+        android:ems="10"
+        android:hint="Titulo"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/txtAutor"
+        app:layout_constraintEnd_toStartOf="@+id/txtDescripciónTicket"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
